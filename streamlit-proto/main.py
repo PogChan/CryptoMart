@@ -274,9 +274,9 @@ if user_type == "Control Panel":
 
                 if st.button(f"Update Listing (ID: {listing_id})", key=f"update_{listing_id}"):
                     if new_expiration_datetime:
-                        update_listing(listing_id, new_title, new_btc_price, new_expiration.strftime("%Y-%m-%d %H:%M:%S"), btc_value_at_listing, new_image_path)
+                        update_listing(listing_id, new_title, new_btc_price, new_expiration.strftime("%Y-%m-%d %H:%M:%S"), listing_btc_value_at_listing, new_image_path)
                     else:
-                        update_listing(listing_id, new_title, new_btc_price, listing_expiration, btc_value_at_listing, new_image_path)
+                        update_listing(listing_id, new_title, new_btc_price, listing_expiration, listing_btc_value_at_listing, new_image_path)
                     st.success(f"Listing ID {listing_id} updated successfully!")
                     st.rerun()
 
